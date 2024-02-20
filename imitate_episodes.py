@@ -402,7 +402,7 @@ def eval_bc(config, ckpt_name, save_episode=True, num_rollouts=50):
         with torch.inference_mode():
             time0 = time.time()
             DT = 1 / FPS
-            culmulated_delay = 0
+            cumulated_delay = 0
             for t in range(max_timesteps):
                 time1 = time.time()
                 ### update onscreen render and wait for DT
@@ -551,9 +551,9 @@ def eval_bc(config, ckpt_name, save_episode=True, num_rollouts=50):
                 time.sleep(sleep_time)
                 # time.sleep(max(0, DT - duration - culmulated_delay))
                 if duration >= DT:
-                    culmulated_delay += duration - DT
+                    cumulated_delay += duration - DT
                     print(
-                        f"Warning: step duration: {duration:.3f} s at step {t} longer than DT: {DT} s, culmulated delay: {culmulated_delay:.3f} s"
+                        f"Warning: step duration: {duration:.3f} s at step {t} longer than DT: {DT} s, culmulated delay: {cumulated_delay:.3f} s"
                     )
                 # else:
                 #     culmulated_delay = max(0, culmulated_delay - (DT - duration))
