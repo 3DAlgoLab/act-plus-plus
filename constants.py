@@ -8,7 +8,7 @@ import os
 #     else "/scr/tonyzhao/datasets"
 # )
 
-DATA_DIR = "/mnt/d/data/aloha"
+DATA_DIR = "/home/j2y/data2"
 
 
 SIM_TASK_CONFIGS = {

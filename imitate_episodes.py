@@ -23,7 +23,9 @@ from utils import (
     calibrate_linear_vel,
     postprocess_base_action,
 )  # helper functions
-from policy import ACTPolicy, CNNMLPPolicy, DiffusionPolicy
+
+# from policy import ACTPolicy, CNNMLPPolicy, DiffusionPolicy
+from policy import ACTPolicy
 from visualize_episodes import save_videos
 
 from detr.models.latent_model import Latent_Model_Transformer
